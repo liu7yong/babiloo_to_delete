@@ -1,1 +1,4 @@
-[http://transmagus-dic.chat.ru/comp.tgz Example] Non-Rich text.
+[http://transmagus-dic.chat.ru/comp.tgz Example] 
+
+Mova format don't support rich text, colors, etc.
+ 
