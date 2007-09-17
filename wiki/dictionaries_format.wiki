@@ -2,7 +2,8 @@
 
 = Dictionaries Formats =
 
-* [Sdictionary_format Sdictionary]
-* [PtkDict_format PtkDict] 
-* [Mova_format Mova]
-* [Dsl_format Dsl] 
+ * [Sdictionary_format Sdictionary]
+ * [PtkDict_format PtkDict]
+ * [Mova_format Mova]
+ * [Dsl_format Dsl] 
+ 
