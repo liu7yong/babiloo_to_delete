@@ -1,0 +1,6 @@
+*D*ictionary *S*pecification *L*anguage is a widely used format, which was introduced by [http://www.abbyy.com/lingvo/ ABBYY Lingvo].
+
+DSL format is open, but not well described.
+Particular enhancements of DSL format support will be done on users' requests.
+
+ 
