@@ -4,3 +4,60 @@ DSL format is open, but not well described.
 Particular enhancements of DSL format support will be done on users' requests.
 
  
+Format Converter extracted from DslConverter.java
+
+{{{
+
+    private static final String TAG_TRANS = "[t]";
+    private static final String TAG_TRANS_CLOSE = "[/t]";
+
+    private static final IReplacer TAB_REPLACER = Replacers.regex( "\t", "" );
+
+    private static final IReplacer[] replacers = {
+            // first \r\n
+            Replacers.regexFirst( "\r\n", "" ),
+
+            // transcription
+            Replacers.regex( "(\\\\\\[)?\\[t\\]", "<span class=\"trans\">[" ), // open
+            Replacers.regex( "\\[/t\\](\\\\\\])?", "]</span>" ), // close
+
+            // sound TODO insert link to media
+            Replacers.regex( "\\[s\\].*\\[/s\\]", "" ),
+
+            // comment
+            Replacers.regex( "\\{\\{.*\\}\\}", "" ),
+
+            // remove all misc tags
+            Replacers.regex( "\\[/?(com|trn|p|ex|lang|!trs)\\]", "" ),
+            Replacers.regex( "\\[lang\\s.*?\\]", "" ), // TODO merge with previous
+
+            // biu
+            Replacers.regex( "\\[(/?[biu])\\]", "<$1>" ),
+
+            // ident
+            Replacers.regex( "\\[m(\\d)\\]", "<div class=\"m$1\">" ), // open
+            Replacers.regex( "\\[/m\\](\r\n|\r|\n)", "</div>" ), // close - nl
+            Replacers.regex( "\\[/m\\]",     "</div>" ), // close
+
+            // color
+            Replacers.regex( "\\[c\\]", "<font color=\"green\">" ), // open
+            Replacers.regex( "\\[c\\s(\\S+)]", "<font color=\"green\">" ), // other TODO convert $1 to HTML-3 colors
+            Replacers.regex( "\\[\\*\\]", "<font color=\"gray\">" ), // gray
+            Replacers.regex( "\\[/(c|\\*)\\]", "</font>" ), // close
+
+            // ref: list item
+            Replacers.regex( "-\\s\\[ref\\](.*?)\\[/ref\\]", "- <font color=\"navy\">$1</font><br>" ),
+
+            // ref TODO merge into one
+            Replacers.regex( "\\[ref\\]", "<font color=\"navy\">" ), // open
+            Replacers.regex( "\\[ref\\s.*?\\]", "<font color=\"navy\">" ), // with attrs
+            Replacers.regex( "\\[/ref\\]", "</font>" ), // close
+
+            // all unutilized NLs -> to <br>
+            Replacers.regex( "(\r\n|\r|\n)", "<br>" ),
+
+            // unescape, must be the last replacement
+            Replacers.regex( "\\\\([^\\\\])", "$1" ),
+    };
+
+}}}
