@@ -1,4 +1,7 @@
 [http://transmagus-dic.chat.ru/comp.tgz Example] 
 
-Mova format don't support rich text, colors, etc.
+Mova format used in [http://www.geocities.com/mueller_dic/ Mueller] and [http://transmagus-dic.chat.ru/ Transmagus] dictionaries.
+
+Often these dictionaries have rich content with transcriptions, indents, lists and highlights.
+ 
  
