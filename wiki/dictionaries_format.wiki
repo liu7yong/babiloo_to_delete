@@ -2,5 +2,6 @@
 
 = Dictionaries Formats =
 
-[sdictionary_format Sdictionary]
+[Sdictionary_format Sdictionary]
+ 
  
