@@ -1,4 +1,5 @@
-*PtkDict MySQL* format was first introduced in [http://swaj.net/ptkdic/ PtkDict]  application, which used pre-installed MySQL server as a storage for its dictionaries.
+*!PtkDict MySQL* format was first introduced in [http://swaj.net/ptkdic/ PtkDict]  application, which used pre-installed MySQL server as a storage for its dictionaries.
 The dictionaries were distributed as dump files which are produced by mysqldump command.
 
 [http://phpmylingvo.sourceforge.net/ phpMyLingvo] is another, web-based application which also uses MySQL server to store dictionaries.
+ 
