@@ -1,0 +1,163 @@
+Copied from "ptksdict-1.1.6.zip", "\share\doc\Format-desc.txt"
+{{{
+
+# $RCSfile: Format-desc.txt,v $
+# $Author: swaj $
+# $Revision: 1.9 $
+#
+# Copyright (c) Alexey Semenoff 2001-2006. All rights reserved.
+# Distributed under GNU Public License.
+#
+
+Sdict file structure
+====================
+
+Foreword
+---------
+
+File contains the following sections:
+
+1. Header
+2. Dictionary information like title, copyright and version.
+3. Short index
+4. Full index
+5. Articles
+
+
+
+uint16_t, uint32_t are little endian;
+utf-32le is also little endian.
+
+Articles, title, copyright, version are organized as a units.
+Unit is universal storage container and looks like;
+
+struct {
+uint32_t record_length;
+utf8 record;
+}
+
+
+
+Header
+------
+
+Structure, 43 (0x2b) byte length:
+
++--------+------------+-----------+--------------------------------------------+
+| Offset | Len, bytes | Content   |              Description                   |
++--------+------------+-----------+--------------------------------------------+
+| 0x0    | 4          | uint8_t[] | Signature, 'sdct'                          |
+| 0x4    | 3          | uint8_t[] | Input language                             |
+| 0x7    | 3          | uint8_t[] | Output language                            |
+| 0xa    | 1          | uint8_t   | Compression method            : (bytes 0-3)|
+|        |            |           |             and index levels  : (bytes 4-7)|
+| 0xb    | 4          | uint32_t  | Amount of words                            |
+| 0xf    | 4          | uint32_t  | Length of short index                      |
+| 0x13   | 4          | uint32_t  | Offset of 'title' unit                     |
+| 0x17   | 4          | uint32_t  | Offset of 'copyright' unit                 |
+| 0x1b   | 4          | uint32_t  | Offset of 'version' unit                   |
+| 0x1f   | 4          | uint32_t  | Offset of short index                      |
+| 0x23   | 4          | uint32_t  | Offset of full index                       |
+| 0x27   | 4          | uint32_t  | Offset of articles                         |
++--------+------------+-----------+--------------------------------------------+
+<p/>
+'short index', 'full index' and 'articles' are offsets from begin of the file.
+Compression methods are '0' - none, '1' - gzip (Zlib), '2' -
+bzip2. If some compression defined, the following sections expected
+to be compressed: Short index, Articles.
+
+Index levels value means how many short index levels are used. By
+default it contains 0x3X which means 3 levels.
+
+
+
+Note!  The only 3 levels are supported in all components, the other
+ones are still experimental!
+
+
+
+Dictionary information
+----------------------
+
+There are 3 sections here: 'title', 'copyright' and 'version' stored
+as 3 units.
+Offsets 'title unit', 'copyright unit' and 'version unit' are from
+begin of the file.
+There is no strict order of storing dictionary information, default
+order is 'title', 'copyright', 'version'.
+
+
+
+Short index
+-----------
+
+Short index is the set of records:
+
+struct {
+utf-32le[3] short_word;
+uint32_t word_pointer;
+}
+
+thus size of each element is 12 (0xc) bytes.
+
+Amount of records stored in header->'Length of short index'
+
+word_pointer points to the whole word from 'full index' and it is
+relative against begin of 'full index' section, not begin of the
+file.
+
+
+
+Full index
+----------
+
+Full index is set of the following records:
+
+struct {
+uint16_t next_word;
+uint16_t previous_word;
+uint32_t article_pointer;
+utf8[]   word;
+}
+
+next_word and previous_word are relative against begin of the
+record. article pointer points to article from 'articles' section
+and it is relative against begin of 'articles' section, not begin
+of the file.
+
+
+
+Articles
+--------
+
+Articles are set of units, see unit description in foreword
+chapter.
+ *
+Copied from "ptksdict-1.1.6.zip", "\share\dicts\README":
+# $RCSfile: README,v $
+# $Author: swaj $
+# $Revision: 1.9 $
+#
+# Copyright (c) Alexey Semenoff 2001-2006. All rights reserved.
+# Distributed under GNU Public License.
+#
+ *
+HOW TO CREATE YOUR OWN DICTIONARY
+ *
+Look an examples in sample*.txt.
+ *
+ *
+Every item looks like WORD___ARTICLE, no "\r", "\n" inside the article,
+both WORD and ARTICLE are utf8-encoded text.
+ *
+Additionaly the following HTML-like tags can be used:
+	<br>                    - "\n"
+	<p>                     - "\n"
+	<b> ... </b>            - use bold font
+	<i> ... </i>            - italic font
+	<u> ... </u>            - underline
+	<l>, <li> ... , </l>    - list, like <ul><li> ...
+	<r>word</r>             - reference to other word, like <a href="word">word</a>
+	<t>trans</t>            - transcription	<t>trans</t>
+	<f>forms</f>            - word forms	<f>forms</f>
+}}}
