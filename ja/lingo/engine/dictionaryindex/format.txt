@@ -1,0 +1,28 @@
+JFDF Specification:
+
+==================================
+INDEX FILE (XXXXX.jfdf)
+==================================
+//int:    "JFDF" - magic
+//int:    JFDF version (1)
+
+int:    size of titles tokens (in bytes)
+int:    size of titles tokens (in bytes)
+
+Tokens: [Titles]
+Tokens: [Bodies]
+==================================
+
+==================================
+TOKENS STRUCTURE
+==================================
+int:   token 1 start
+int:   token 1 end
+
+int:   token 2 start
+int:   token 2 end
+...
+int:   token N start
+int:   token N end
+-------------------------
+==================================
