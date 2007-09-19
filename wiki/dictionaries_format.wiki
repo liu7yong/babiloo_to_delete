@@ -7,5 +7,7 @@
  * [PtkDict_format PtkDict]
  * [Mova_format Mova]
  * [Dsl_format Dsl] 
+ * [StarDict_format StarDict] 
+ 
  
  
