@@ -3,8 +3,9 @@ Extracted from the [http://downloads.sourceforge.net/stardict/stardict-3.0.0.tar
 ------------------------------------
 
 
-StarDict homepage: http://stardict.sourceforge.net
-StarDict on-line dictionary: http://www.stardict.org
+!StarDict homepage: http://stardict.sourceforge.net
+
+!StarDict on-line dictionary: http://www.stardict.org
 
 ==Number and Byte-order Conventions==
 {{{
@@ -561,5 +562,6 @@ http://forlinux.yeah.net
 
  
 
+ 
  
  
