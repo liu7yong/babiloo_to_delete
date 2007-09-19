@@ -1,4 +1,4 @@
-=Format for StarDict dictionary files=
+=Format for !StarDict dictionary files=
 Extracted from the [http://downloads.sourceforge.net/stardict/stardict-3.0.0.tar.bz2 3.0.0 source code]
 ------------------------------------
 
@@ -561,4 +561,5 @@ http://forlinux.yeah.net
 
  
 
+ 
  
