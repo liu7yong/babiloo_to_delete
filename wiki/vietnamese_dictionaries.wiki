@@ -1,0 +1,30 @@
+#summary How to install the vietnamese dictionaries
+
+==1. Install the Java Virtual Machine==
+*Download and install the [http://java.com/ latest version of JRE]*
+For Ubuntu users: 
+{{{
+sudo apt-get install sun-java6-jre
+}}}
+
+==2. Download Babiloo.jar==
+
+Download from [http://babiloo.googlecode.com/files/babiloo.jar here].
+In windows execute with double click.
+In linux, MacOs:
+{{{
+java -jar babiloo.jar
+}}}
+
+==3. Download & Unzip the dictionaries==
+
+|| *Name* || *Nº Articles* || *Version* || *Date Updated*|| *Format* ||
+|| Vietnamese -> English || 23.446 || 2.0 || 26 Sept 07|| Sdictionary ||
+|| English -> Vietnamese || 108.851 || 2.0 || 26 Sept 07|| Sdictionary ||
+|| French -> Vietnamese ||  ||  || Cooming Soon || Sdictionary ||
+|| Vietnamese -> French ||  ||  || Cooming Soon || Sdictionary ||
+|| Germany -> Vietnamese ||  ||  || Cooming Soon || Sdictionary ||
+|| Vietnamese -> Germany ||  ||  || Cooming Soon || Sdictionary ||
+
+==4. Add the dictionaries into Babiloo==
+==5. Enjoy, send us feedback, chocolate, etc==
