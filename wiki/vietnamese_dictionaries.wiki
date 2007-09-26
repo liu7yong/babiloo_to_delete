@@ -1,4 +1,3 @@
-#summary How to install the vietnamese dictionaries
 #labels Featured
 = Vietnamese dictionaries =
 
