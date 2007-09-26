@@ -7,6 +7,7 @@
 
 ==1. Install the Java Virtual Machine==
 *Download and install the [http://java.com/ latest version of JRE]*
+
 For Ubuntu users: 
 {{{
 sudo apt-get install sun-java6-jre
@@ -16,7 +17,7 @@ sudo apt-get install sun-java6-jre
 
 Download from [http://babiloo.googlecode.com/files/babiloo.jar here].
 In windows execute with double click.
-In linux, MacOs:
+In linux, !MacOs:
 {{{
 java -jar babiloo.jar
 }}}
