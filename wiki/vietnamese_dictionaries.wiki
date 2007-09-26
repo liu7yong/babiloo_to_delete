@@ -1,8 +1,8 @@
 #summary How to install the vietnamese dictionaries
 
 == First, some screenshots ==
-[http://babiloo.googlecode.com/files/babiloo_vietnamese1.jpg http://babiloo.googlecode.com/files/babiloo_vietnamese1_small.jpg]
-[http://babiloo.googlecode.com/files/babiloo_vietnamese2.jpg http://babiloo.googlecode.com/files/babiloo_vietnamese2_small.jpg]
+[http://ivangarcia.org/babiloo/babiloo_vietnamese1.jpg http://ivangarcia.org/babiloo/babiloo_vietnamese1_small.jpg]
+[http://ivangarcia.org/babiloo/babiloo_vietnamese2.jpg http://ivangarcia.org/babiloo/babiloo_vietnamese2_small.jpg]
 
 ==1. Install the Java Virtual Machine==
 *Download and install the [http://java.com/ latest version of JRE]*
