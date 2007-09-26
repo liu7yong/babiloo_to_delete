@@ -31,6 +31,6 @@ class VisitHomeAction extends AAction {
     }
 
     public void actionPerformed( ActionEvent e ) {
-        Browser.openUrl( "http://jalingo.sourceforge.net/?version=" + JaLingoInfo.VERSION );
+        Browser.openUrl( "http://babiloo.sourceforge.net/");
     }
 }

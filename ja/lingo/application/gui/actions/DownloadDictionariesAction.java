@@ -31,6 +31,6 @@ class DownloadDictionariesAction extends AAction {
     }
 
     public void actionPerformed( ActionEvent e ) {
-        Browser.openUrl( "http://jalingo.sourceforge.net/dictionaries/?version=" + JaLingoInfo.VERSION );
+        Browser.openUrl( "http://code.google.com/p/babiloo/wiki/download_dictionaries");
     }
 }
