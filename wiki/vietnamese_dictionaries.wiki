@@ -1,5 +1,9 @@
 #summary How to install the vietnamese dictionaries
 
+== First, some screenshots ==
+[http://babiloo.googlecode.com/files/babiloo_vietnamese1.jpg http://babiloo.googlecode.com/files/babiloo_vietnamese1_small.jpg]
+[http://babiloo.googlecode.com/files/babiloo_vietnamese2.jpg http://babiloo.googlecode.com/files/babiloo_vietnamese2_small.jpg]
+
 ==1. Install the Java Virtual Machine==
 *Download and install the [http://java.com/ latest version of JRE]*
 For Ubuntu users: 
@@ -19,8 +23,8 @@ java -jar babiloo.jar
 ==3. Download & Unzip the dictionaries==
 
 || *Name* || *Nº Articles* || *Version* || *Date Updated*|| *Format* ||
-|| Vietnamese -> English || 23.446 || 2.0 || 26 Sept 07|| Sdictionary ||
-|| English -> Vietnamese || 108.851 || 2.0 || 26 Sept 07|| Sdictionary ||
+|| [http://babiloo.googlecode.com/files/vi_en.zip Vietnamese -> English] || 23.446 || 2.0 || 26 Sept 07|| Sdictionary ||
+|| [http://babiloo.googlecode.com/files/en_vi.zip English -> Vietnamese] || 108.851 || 2.0 || 26 Sept 07|| Sdictionary ||
 || French -> Vietnamese ||  ||  || Cooming Soon || Sdictionary ||
 || Vietnamese -> French ||  ||  || Cooming Soon || Sdictionary ||
 || Germany -> Vietnamese ||  ||  || Cooming Soon || Sdictionary ||
