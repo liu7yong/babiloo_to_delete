@@ -12,10 +12,10 @@ Foritudentu users:
 sudo apt-get install sun-java6-jre
 }}}
 
-= *For WINDOWS
+= * For WINDOWS
 Download the EXE installer from [http://babiloo.googlecode.com/files/Babiloo-installer.exe here].
 
- *For Linux,MacOS==2. Download Babiloo.jar==
+ * For Linux,MacOS==2. Download Babiloo.jar==
 
 Download from [http://babiloo.googlecode.com/files/babiloo.jar here].
 In windows execute with double click.
